@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Finder</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--The Main Page-->
+    <div class="MainPage">
+    <p id="app_name"><span id="jip">JIP</span>Finder<!--Replace with the website name we go with--></h1>
+    <img src=""><!--If you guys want to add a image of the logo, place it here and maybe remove the "JIP Finder" Title-->
+    <p id="slogan">Tell us your <span id="slogan_words">Skills</span> and <span id="slogan_words">Interests</span> and we'll find <span id="slogan_words">Work</span> for you!</h3>
+    </div>
+    <br>
+    <br>
+    <!--The User Inputs-->
+    <div class="UserInputs">
+    <form action="/submit"> 
+        <div class="form_question">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"  placeholder="Enter your name" required>
+        </div>
+        <div class="form_question">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+    </div>
+        <div class="form_question">
+        <label for="city">City & State:</label>
+        <input type="text" id="city" name="city" placeholder="Enter your city and state" required>
+    </div>
+        <div class="form_question">
+        <label for="type">Type:</label>
+        <select id="type">
+            <option></option>
+            <option>Job</option>
+            <option>Internship</option>
+            <option>Programs</option>
+        </select>
+    </div>
+        <div class="form_question">
+        <label for="fieldOfInterest">Field of Interest:</label>
+        <select id="fieldOfInterest">
+            <option></option>
+            <option>Accounting</option>
+            <option>Accounting and Finance</option>
+            <option>Account Management</option>
+            <option>Account Management/Customer Success</option>
+            <option>Administration and Office</option>
+            <option>Advertising and Marketing</option>
+            <option>Animal Care</option>
+            <option>Arts</option>
+            <option>Business Operations</option>
+            <option>Cleaning and Facilities</option>
+            <option>Computer and IT</option>
+            <option>Construction</option>
+            <option>Corporate</option>
+            <option>Customer Service</option>
+            <option>Data and Analytics</option>
+            <option>Data Science</option>
+            <option>Design</option>
+            <option>Design and UX</option>
+            <option>Editor</option>
+            <option>Education</option>
+            <option>Energy Generation and Mining</option>
+            <option>Entertainment and Travel Services</option>
+            <option>Farming and Outdoors</option>
+            <option>Food and Hospitality Services</option>
+            <option>Healthcare</option>
+            <option>HR</option>
+            <option>Human Resources and Recruitment</option>
+            <option>Installation, Maintenance, and Repairs</option>
+            <option>IT</option>
+            <option>Law</option>
+            <option>Legal Services</option>
+            <option>Management</option>
+            <option>Manufacturing and Warehouse</option>
+            <option>Marketing</option>
+            <option>Mechanic</option>
+            <option>Media, PR, and Communications</option>
+            <option>Mental Health</option>
+            <option>Nurses</option>
+            <option>Office Administration</option>
+            <option>Personal Care and Services</option>
+            <option>Physical Assistant</option>
+            <option>Product</option>
+            <option>Product Management</option>
+            <option>Project Management</option>
+            <option>Protective Services</option>
+            <option>Public Relations</option>
+            <option>Real Estate</option>
+            <option>Recruitinh</option>
+            <option>Retail</option>
+            <option>Sales</option>
+            <option>Science and Engineering</option>
+            <option>Social Services</option>
+            <option>Software Engineering</option>
+            <option>Sports, Fitness, and Recreation</option>
+            <option>Transportation and Logistics</option>
+            <option>Unknown</option>
+            <option>UX</option>
+            <option>Videography</option>
+            <option>Writer</option>
+            <option>Writing and Editing</option>
+        </select>
+    </div>
+      
+        <input type="submit" value="Submit" id="submit" class="form_question">
+      </form>
+    </div>
+    <!--Job Results-->
+    <div id="nameWelcome"></div>
+    <div class="JobResults" id = "results">
+        
+    </div>
+
+</body>
+</html>

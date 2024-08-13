@@ -1,0 +1,78 @@
+body{
+    font-family: 'Verdana', Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    background-color: rgb(224, 240, 255);
+}
+#jip {
+    color: #00B8D8;
+}
+#slogan_words {
+    color: #03D9FF;
+    
+}
+#app_name {
+    font-size: 100px;
+    margin: 75px;
+}
+#slogan {
+    font-size: 30px;
+}
+.MainPage {
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.UserInputs {
+    padding: 25px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(216, 250, 255); 
+    border: 10px solid rgb(192, 237, 255);
+    border-radius: 18px;
+    font-size: 25px;
+}
+input, select {
+    background-color: rgb(224, 240, 255);
+    height: 50px;
+    font-size: 20px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.form_question {
+    margin:15px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+#submit {
+    padding: 0;
+    font-size: 25px;
+    width: 150px;
+    height: 100px;
+    background-color: rgb(192, 237, 255);
+    border-radius: 25px;
+    border: 0px;
+}
+
+
+.JobResults {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(216, 250, 255); 
+    text-align: center;
+    border: 10px solid rgb(192, 237, 255);
+    border-radius: 18px; 
+}
+
