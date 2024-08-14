@@ -2,6 +2,9 @@ body{
     font-family: 'Verdana', Verdana, Geneva, Tahoma, sans-serif;
     color: #000000;
     background-color: rgb(224, 240, 255);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 #jip {
     color: #00B8D8;
@@ -76,3 +79,23 @@ form {
     border-radius: 18px; 
 }
 
+footer{
+    background-color:  rgb(216, 250, 255);
+    color:rgb(0, 0, 0);
+    margin-top: 50px;
+    margin-left: 0px;
+    border-color: rgb(192, 237, 255);
+    border-width: 10px;
+    border-style: solid;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.nameWelcome{
+    text-align: center;
+}
+
+.individualResult{
+    font-size: 18px;
+}

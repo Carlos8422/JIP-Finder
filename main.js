@@ -20,6 +20,7 @@ fieldOfInterestInput.style.display = "none";
 typeInput.addEventListener("change", foiNone);
 ageInput.addEventListener("change", checkAge);
 
+
 function foiNone(){
     if(typeInput.value=="Programs"){
         fieldOfInterestInput.style.display="none";
@@ -54,6 +55,10 @@ let company;
 let link;
 
 let programNum;
+
+let directionTitle;
+let directionsDiv;
+let eachDirection;
 
 function search(){
     fetch('https://www.themuse.com/api/public/jobs?category='+category+'&level='+level+'&'+jobLocation+'&page=1')
@@ -98,11 +103,39 @@ function search(){
 
             company = document.createElement('p');
             company.className = 'company';
-            company.innerText = "Company: "+ myJson.results[i].company.name
+            company.innerText = "Company: "+ myJson.results[i].company.name;
 
-            link = document.createElement('p'); 
+            directionsDiv = document.createElement('div');
+            directionsDiv.className = "directionsDiv";
+            directionTitle = document.createElement('p');
+            directionTitle.className="directionTitle";
+            directionTitle.innerText = "Location(s): ";
+            directionsDiv.appendChild(directionTitle);
+
+            for(let j =0; j<myJson.results[i].locations.length; j++){
+                eachDirection = document.createElement('span');
+                eachDirection.className="eachDirection";
+                if(j==myJson.results[i].locations.length-1){
+                    eachDirection.innerText = myJson.results[i].locations[j].name;
+                }else{
+                    eachDirection.innerText = myJson.results[i].locations[j].name + "---" ;
+                }
+        
+                directionsDiv.appendChild(eachDirection);
+            }
+            directionsDiv.style.margin = "15px";
+            
+            link = document.createElement('div'); 
             link.className = 'link';
-            link.innerText = "Link: "+ myJson.results[i].refs.landing_page
+            linkTitle = document.createElement('span');
+            linkTitle.innerText = "Link: ";
+            linkRef = document.createElement('a');
+            linkRef.href= myJson.results[i].refs.landing_page;
+            linkRef.target = "_blank";
+            linkRef.innerHTML = myJson.results[i].refs.landing_page;
+            link.append(linkTitle);
+            link.append(linkRef);
+            link.style.margin = "15px";
 
             individualResultDiv.appendChild(job_internshipNum);
             individualResultDiv.appendChild(title);
@@ -110,6 +143,7 @@ function search(){
             individualResultDiv.appendChild(link);
             individualResultDiv.style.border = "solid 5px black";
             individualResultDiv.style.margin = "20px";
+            individualResultDiv.appendChild(directionsDiv);
 
             resultOutput.append(individualResultDiv);
         }
@@ -165,9 +199,17 @@ function youthProgram(){
             company.className = 'company';
             company.innerText = "Company: "+ myJson.YouthProgramList[i].Name
     
-            link = document.createElement('p'); 
+            link = document.createElement('div'); 
             link.className = 'link';
-            link.innerText = "Link: "+ myJson.YouthProgramList[i].WebSiteUrl;
+            linkTitle = document.createElement('span');
+            linkTitle.innerText = "Link: ";
+            linkRef = document.createElement('a');
+            linkRef.href= myJson.YouthProgramList[i].WebSiteUrl;
+            linkRef.target = "_blank";
+            linkRef.innerHTML = myJson.YouthProgramList[i].WebSiteUrl;
+            link.append(linkTitle);
+            link.append(linkRef);
+            link.style.margin = "15px";
     
             locationP=document.createElement('p');
             locationP.className = 'location';
@@ -204,6 +246,7 @@ function selectAPI(event){
     programLocation = jobLocationInput.toLowerCase();
 
     nameWelcome = document.createElement("h1");
+    nameWelcome.className = "nameWelcome"
     nameWelcome.innerText = "Welcome " + nameInput.value + ". Here are your results!"
     nameWelcomeDiv.append(nameWelcome);
 
