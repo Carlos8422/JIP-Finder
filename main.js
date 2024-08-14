@@ -6,6 +6,8 @@ let typeInput = document.getElementById("type");
 let fieldOfInterestInput = document.getElementById("fieldOfInterest");
 let submitButton = document.getElementById("submit");
 let resultOutput = document.getElementById("results");
+let foiTitle = document.getElementById("fieldOfInterestTitle");
+let typeTitle = document.getElementById("typeTitle");
 
 let nameWelcome;
 let nameWelcomeDiv = document.getElementById("nameWelcome");
@@ -16,6 +18,8 @@ submitButton.addEventListener("click", selectAPI);
 
 typeInput.style.display = "none";
 fieldOfInterestInput.style.display = "none";
+foiTitle.style.display = "none";
+typeTitle.style.display = "none";
 
 typeInput.addEventListener("change", foiNone);
 ageInput.addEventListener("change", checkAge);
@@ -34,10 +38,14 @@ function checkAge(){
     if(ageInput.value >= 14){
         typeInput.style.display = "block";
         fieldOfInterestInput.style.display = "block";
+        foiTitle.style.display = "block";
+        typeTitle.style.display = "block";
         
     }else{
         typeInput.style.display = "none";
         fieldOfInterestInput.style.display = "none";
+        foiTitle.style.display = "none";
+        typeTitle.style.display = "none";
         typeInput.value="Programs";
     }
 }
